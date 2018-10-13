@@ -11,14 +11,13 @@ public class ElementFinder {
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		int NearbyCounter = -(range);
 		for(int i = 0; i < range * 2;i++){
-			System.out.println("NearbyCounter=" + NearbyCounter);
 			if (NearbyCounter == 0){
 				NearbyCounter += 1;
 			}
 			try{
 					result.add(multi[x][y + NearbyCounter]);
 			}  catch (IndexOutOfBoundsException e) {
-				System.err.println("IndexOutOfBoundsException: " + e.getMessage());
+				
 			}
 			NearbyCounter += 1;
 		}
